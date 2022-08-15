@@ -29,7 +29,6 @@ def index():
         r2=model2.predict([[rates]])
         model3 = joblib.load("neural_network_DBS")
         r3=model3.predict([[rates]])
-        print(r1,r2)
         return(render_template("index.html",result1=r1,result2=r2,result3=r3))
     else:
         return(render_template("index.html",result1="waiting",result2="waiting",result3="waiting"))
